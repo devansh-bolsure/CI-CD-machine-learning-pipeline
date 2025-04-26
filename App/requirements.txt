@@ -1,0 +1,9 @@
+gradio>=4.22.0
+skops>=0.11.0
+black
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+
