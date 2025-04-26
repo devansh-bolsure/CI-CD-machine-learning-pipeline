@@ -32,6 +32,6 @@ hf-login:
 push-hub:
 	huggingface-cli upload Deva2149/Drug-classification2 ./App --repo-type=space --commit-message="Sync App files"
 	huggingface-cli upload Deva2149/Drug-classification2 ./Model /Model --repo-type=space --commit-message="Sync Model"
-	huggingface-cli upload Deva2149/Drug-classification2 ./Results /Metrics --repo-type=space --commit-message="Sync Metrics"
+	huggingface-cli upload Deva2149/Drug-classification2 ./Result /Metrics --repo-type=space --commit-message="Sync Metrics"
 
 deploy: hf-login push-hub
