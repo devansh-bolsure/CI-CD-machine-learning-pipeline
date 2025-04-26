@@ -1,6 +1,6 @@
 install:
-	pip install --upgrade pip &&\
-	pip install -r "C:\\Users\\DEVANSH BOLSURE\\Dropbox\\My PC (LAPTOP-9PET8DJR)\\Documents\\anime\\MOVIES\\python_practice\\for_job\\ci_cd_project\\requirements.txt"
+	pip install --upgrade pip && \
+	pip install -r requirements.txt
 
 format:
 	black *.py
