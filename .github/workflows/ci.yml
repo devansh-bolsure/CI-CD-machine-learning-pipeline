@@ -27,4 +27,4 @@ jobs:
         env:
           NAME: ${{ secrets.USER_NAME }}
           EMAIL: ${{ secrets.USER_EMAIL }}
-        run: make update-branch USER_NAME=devansh-bolsure USER_EMAIL=devansh-bolsure@users.noreply.github.com
+        run: make update-branch USER_NAME=$NAME USER_EMAIL=$EMAIL
