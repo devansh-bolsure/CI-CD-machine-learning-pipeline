@@ -2,4 +2,6 @@ black
 pandas
 numpy
 scikit-learn
+matplotlib
+seaborn
 skops
