@@ -2,7 +2,7 @@
 #Importing libraries  and Loading the dataset
 import pandas as pd
 
-drug_df=pd.read_csv('Data\drug200.csv')
+drug_df=pd.read_csv('Data/drug200.csv')
 drud_df=drug_df.sample(frac=1)
 drug_df.head(3)
 
@@ -54,7 +54,7 @@ report=classification_report(y_test,y_pred)
 
 print(report)
 
-with open('Result\metrics.txt','w') as outfile:
+with open('Result/metrics.txt','w') as outfile:
     outfile.write(f'\nclassification_report = {report}')
 
 import matplotlib.pyplot as plt
@@ -62,17 +62,17 @@ from sklearn.metrics import ConfusionMatrixDisplay,confusion_matrix
 cm=confusion_matrix(y_test,y_pred,labels=pipe.classes_)
 disp=ConfusionMatrixDisplay(confusion_matrix=cm,display_labels=pipe.classes_)
 disp.plot()
-plt.savefig('Result\model_results.png',dpi=120)
+plt.savefig('Result/model_results.png',dpi=120)
 
 """Saving the Model"""
 
 import skops.io as sio
 
-sio.dump(pipe,'Model\drug_pipeline.skops')
+sio.dump(pipe,'Model/drug_pipeline.skops')
 
 from skops import io as sio
 
-file_path = 'Model\drug_pipeline.skops'
+file_path = 'Model/drug_pipeline.skops'
 
 # Open the file in binary mode
 with open(file_path, "rb") as f:
